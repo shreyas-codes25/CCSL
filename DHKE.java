@@ -10,11 +10,11 @@ class DHKE {
     }
 
     public static void main(String[] args) {
-        BigInteger P, G, x, a, y, b, ka, kb;
+        BigInteger N, G, x, a, y, b, ka, kb;
         Scanner s = new Scanner(System.in);
 
-        System.out.println("Enter value of p:" );
-        P = s.nextBigInteger();
+        System.out.println("Enter value of N:" );
+        N = s.nextBigInteger();
 
         
 
@@ -25,16 +25,16 @@ class DHKE {
         System.out.println("Enter value of Private key of a :" );
         a = s.nextBigInteger();
 
-        x = power(G, a, P);
+        x = power(G, a, N);
 
         
         System.out.println("Enter value of private ket of b:" );
         b = s.nextBigInteger();
 
-        y = power(G, b, P);
+        y = power(G, b, N);
 
-        ka = power(y, a, P);
-        kb = power(x, b, P);
+        ka = power(y, a, N);
+        kb = power(x, b, N);
 
         System.out.println("Secret key for the A is:"+ ka);
         System.out.println("Secret key for the B is:"+ kb);
